@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Chef::Cloudsearch::VERSION
   spec.authors       = ["Nolan Davidson"]
   spec.email         = ["nolan.davidson@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = "Add cloud search capability to Chef"
+  spec.summary       = "Add cloud search capability to Chef"
   spec.homepage      = ""
   spec.license       = "MIT"
 

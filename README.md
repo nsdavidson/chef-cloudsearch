@@ -1,20 +1,16 @@
 # Chef::Cloudsearch
 
-TODO: Write a gem description
+This gem adds the ability to search cloud providers for resources from within
+a Chef recipe.  Currently only AWS is supported.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install the gem in a recipe by using chef_gem and require it before using.
 
-    gem 'chef-cloudsearch'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install chef-cloudsearch
+```
+chef_gem 'chef-cloudsearch'
+require 'chef/cloudsearch'
+```
 
 ## Usage
 
