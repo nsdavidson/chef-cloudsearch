@@ -1,7 +1,9 @@
 # Chef::Cloudsearch
 
 This gem adds the ability to search cloud providers for resources from within
-a Chef recipe.  Currently only AWS is supported.
+a Chef recipe.  The purpose is to allow searching for resources that are not
+managed by Chef directly (RDS instances, Elasticache, etc)
+Currently only AWS is supported.
 
 ## Installation
 
@@ -14,7 +16,16 @@ require 'chef/cloudsearch'
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently only AWS EC2 is supported as this is only a prototype.  Example usage:
+
+```
+result = cloudsearch(<aws_access_key_id>, <aws_secret_access_key>, <ec2_region>, :ec2, [ { name: 'tag-value', values: ["testing"]  } ])
+
+puts result.first[:public_dns_name]
+result.each do |instance|
+  puts instance[:public_dns_name]
+end
+```
 
 ## Contributing
 
